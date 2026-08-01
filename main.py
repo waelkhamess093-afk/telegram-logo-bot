@@ -1,7 +1,7 @@
 from telegram import Update
 from telegram.ext import Application, MessageHandler, ContextTypes, filters
 
-TOKEN = "8536670434:AAGlAwuP5jGYCHYVM09zCwCLg3tItpmstmo""
+TOKEN = "8536670434:AAGlAwuP5jGYCHYVM09zCwCLg3tItpmstmo"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("ابعت أي صورة وأنا هضيف اللوجو عليها.")
