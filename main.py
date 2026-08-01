@@ -14,10 +14,10 @@ async def photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await photo_file.download_to_drive(input_path)
 
     image = Image.open(input_path).convert("RGB")
-    logo = Image.open("91921.png").convert("RGBA")
+    logo = Image.open("logo.png").convert("RGBA")
 
     # تصغير اللوجو
-    new_width = image.width // 4
+    new_width = image.width // 10
     ratio = new_width / logo.width
     new_height = int(logo.height * ratio)
     logo = logo.resize((new_width, new_height))
@@ -26,7 +26,7 @@ async def photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     x = 20
     y = image.height - logo.height - 20
 
-    image.paste(logo, (x, y))
+    image.paste(logo, (x, y), logo)
 
     image.save(output_path)
 
