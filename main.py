@@ -4,7 +4,7 @@ from telegram.ext import Application, MessageHandler, ContextTypes, filters
 from PIL import Image
 import os
 
-TOKEN = "8536670434:...stmo"
+TOKEN = "8536670434:AAGlAwuP5jGYCHYVM09zCwCLg3tItpmstmo"
 
 async def photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     photo_file = await update.message.photo[-1].get_file()
