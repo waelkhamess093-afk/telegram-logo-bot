@@ -1,4 +1,3 @@
-
 from telegram import Update
 from telegram.ext import Application, MessageHandler, ContextTypes, filters
 from PIL import Image
@@ -15,7 +14,7 @@ async def photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await photo_file.download_to_drive(input_path)
 
     image = Image.open(input_path).convert("RGB")
-    logo = Image.open("logo.jpg").convert("RGB")
+    logo = Image.open("91921.png").convert("RGBA")
 
     # تصغير اللوجو
     new_width = image.width // 4
